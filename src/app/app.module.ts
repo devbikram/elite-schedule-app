@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
-import { IonicApp, IonicModule } from 'ionic-angular';
-import { MyApp } from './app.component';
-import { MyTeamsPage, TournamentsPage, TeamsPage, TeamHomePage, TeamDetailPage,StandingsPage } from '../pages/pages';
+import {NgModule} from '@angular/core';
+import {IonicApp, IonicModule} from 'ionic-angular';
+import {MyApp} from './app.component';
+import {MyTeamsPage, TournamentsPage, TeamsPage, TeamHomePage, TeamDetailPage, StandingsPage, GamePage} from '../pages/pages';
+import {EliteApi} from '../shared/shared'
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { MyTeamsPage, TournamentsPage, TeamsPage, TeamHomePage, TeamDetailPage,S
     TeamsPage,
     TeamHomePage,
     TeamDetailPage,
-    StandingsPage
+    StandingsPage,
+    GamePage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -24,8 +26,12 @@ import { MyTeamsPage, TournamentsPage, TeamsPage, TeamHomePage, TeamDetailPage,S
     TeamsPage,
     TeamHomePage,
     TeamDetailPage,
-    StandingsPage
+    StandingsPage,
+    GamePage
   ],
-  providers: []
+  providers: [
+    EliteApi
+  ]
 })
-export class AppModule {}
+export class AppModule {
+}

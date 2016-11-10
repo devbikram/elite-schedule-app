@@ -3,7 +3,6 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 import { MyTeamsPage, TournamentsPage } from '../pages/pages';
 
-
 @Component({
   templateUrl: 'app.html'
 })
@@ -11,8 +10,6 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = MyTeamsPage;
-
-  pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform) {
     this.initializeApp();
